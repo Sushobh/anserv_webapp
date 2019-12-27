@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {PasswordModule} from 'primeng/password';
 import {CardModule} from 'primeng/card';
+import {ToastModule} from 'primeng/toast';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {CardModule} from 'primeng/card';
     ButtonModule,
     InputTextModule,
     PasswordModule,
-    CardModule
+    CardModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

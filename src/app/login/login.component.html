@@ -8,10 +8,11 @@
       <h3>Log In</h3>
       <input type="text" pInputText placeholder="Email Address" class="login_item"/>
       <input type="password" pPassword placeholder="Password" class="login_item" [feedback]="false"/>
-      <p-button label="Log In" class="login_item" ></p-button>
+      <p-button label="Log In" class="login_item" (onClick)="loginClicked()"></p-button>
      </div>
   
   </p-card>
 
+  <p-toast key="loginResultToast" position="bottom-center"></p-toast>
 
 </div>
