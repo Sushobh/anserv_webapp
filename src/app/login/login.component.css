@@ -1,0 +1,24 @@
+
+
+
+#login_holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+
+#login_holder_wrapper {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+
+.login_item {
+    width: 300px;
+    margin: 10px;
+}
