@@ -24,9 +24,11 @@
 :host >>> .ui-inputtext {
     color : white;
     background: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 #mylabel{
+    font-family: 'Roboto', sans-serif;
     color: white;
 }
 
