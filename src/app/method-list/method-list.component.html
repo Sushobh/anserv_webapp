@@ -1,6 +1,11 @@
 <div id="main">
   <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
-    <label for="float-input">Search Methods</label>
+    <input id="float-input" type="text" size="30" pInputText (input)="onSearchChange($event.target.value)"> 
+    <label id="mylabel" for="float-input">Search Methods</label>
   </span>
+  <ul class="method-list">
+   <li class="method-list-item" *ngFor="let method of methodListDisplay;" >
+   <p-card class="pcardhere">{{method}}</p-card>
+   </li>
+  </ul>
 </div>

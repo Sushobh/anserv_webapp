@@ -13,6 +13,7 @@ import { MethodInfoComponent } from './method-info/method-info.component';
 import { ResponseDisplayComponent } from './response-display/response-display.component';
 import { MainHolderComponent } from './main-holder/main-holder.component';
 import { RouterModule, Routes } from '@angular/router';
+import {CodeHighlighterModule} from 'primeng/codehighlighter';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RouterModule, Routes } from '@angular/router';
     InputTextModule,
     PasswordModule,
     CardModule,
+    CodeHighlighterModule,
     ToastModule,
     RouterModule.forRoot(
       [],
