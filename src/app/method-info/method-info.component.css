@@ -1,0 +1,57 @@
+
+
+:host >>> .ui-card {
+    background-color: white;
+    color : white;
+    display: inline-block;
+    padding: 5px;
+}
+
+:host >>> .ui-inputtext {
+   color : white;
+   background: black;
+   font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style-type: none;
+ 
+}
+
+#mylabel{
+    font-family: 'Roboto', sans-serif;
+    color: #2196F3;
+}
+
+h1{
+    color : white;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+}
+
+.form-list{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.form-list  li{
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main2 {
+    display: flex;
+    direction: row;
+    align-items: center;
+}
+
+:host >>> .ui-button{
+    background-color: red;
+    width : 150px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+}
+

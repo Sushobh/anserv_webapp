@@ -13,5 +13,18 @@
 
 app-method-list {
     flex-grow: 2;
-   
+}
+
+app-method-info{
+    flex-grow: 2;
+}
+
+app-response-display{
+    background-color: black;
+    flex-grow: 10;
+    margin: 10px;
+    padding: 10px;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 10px;
 }

@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MethodInfoComponent implements OnInit {
 
+
+  requestTemplate = {
+    name : 'asd',
+    age : '234ew',
+    alive : 'sadsd',
+    profession : '123123'
+  }
+
+  postBody = {
+
+  }
+
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickedOnSubmit(){
+    console.log(this.postBody)
   }
 
 }

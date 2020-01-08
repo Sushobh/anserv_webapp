@@ -1,3 +1,19 @@
-<div>
-  Need to create method form here!
+<div id="main">
+  <h1>Make your request here</h1>
+  <p-button label="Submit" (click)="clickedOnSubmit()"></p-button>
+  <div id="main2">
+
+    <ul class="form-list">
+      <li *ngFor="let item of requestTemplate | keyvalue">
+        <p-card>
+          <span class="ui-float-label">
+            <input  type="text" size="30"  [(ngModel)]="postBody[item.key]" pInputText>  
+            <label  id="mylabel">{{item.key}}</label>
+        </span>
+        </p-card>
+      
+      </li>
+    </ul>
+  
+  </div>
 </div>

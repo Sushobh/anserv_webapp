@@ -14,6 +14,7 @@ import { ResponseDisplayComponent } from './response-display/response-display.co
 import { MainHolderComponent } from './main-holder/main-holder.component';
 import { RouterModule, Routes } from '@angular/router';
 import {CodeHighlighterModule} from 'primeng/codehighlighter';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {CodeHighlighterModule} from 'primeng/codehighlighter';
     CardModule,
     CodeHighlighterModule,
     ToastModule,
+    FormsModule,
     RouterModule.forRoot(
       [],
       { enableTracing: true } // <-- debugging purposes only
