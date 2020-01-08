@@ -7,7 +7,7 @@
 
 #main2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-grow: 8;
 }
 
@@ -16,12 +16,12 @@ app-method-list {
 }
 
 app-method-info{
-    flex-grow: 2;
+    flex-grow: 1;
 }
 
 app-response-display{
-    background-color: black;
-    flex-grow: 10;
+  
+    flex-grow: 1;
     margin: 10px;
     padding: 10px;
     border-width: 5px;

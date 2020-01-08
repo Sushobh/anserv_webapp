@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainServiceService } from '../services/main-service.service';
 
 @Component({
   selector: 'app-method-info',
@@ -20,13 +21,15 @@ export class MethodInfoComponent implements OnInit {
   }
 
 
-  constructor() { }
+  constructor(private mainService: MainServiceService) { }
 
   ngOnInit() {
+     this.mainService.methodClick.subscribe(() => {
+     });
   }
 
-  clickedOnSubmit(){
-    console.log(this.postBody)
+  clickedOnSubmit() {
+    console.log(this.postBody);
   }
 
 }

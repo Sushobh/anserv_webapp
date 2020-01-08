@@ -15,7 +15,7 @@ import { MainHolderComponent } from './main-holder/main-holder.component';
 import { RouterModule, Routes } from '@angular/router';
 import {CodeHighlighterModule} from 'primeng/codehighlighter';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     CodeHighlighterModule,
     ToastModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       [],
       { enableTracing: true } // <-- debugging purposes only

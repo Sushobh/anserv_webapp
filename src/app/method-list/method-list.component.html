@@ -4,7 +4,7 @@
     <label id="mylabel" for="float-input">Search Methods</label>
   </span>
   <ul class="method-list">
-   <li class="method-list-item" *ngFor="let method of methodListDisplay;" >
+   <li class="method-list-item" *ngFor="let method of methodListDisplay;" (click)="clickedOn(method)">
    <p-card class="pcardhere">{{method}}</p-card>
    </li>
   </ul>
