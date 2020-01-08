@@ -1,0 +1,16 @@
+#main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#main2 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 8;
+}
+
+app-method-list {
+    flex-grow: 2;
+   
+}
