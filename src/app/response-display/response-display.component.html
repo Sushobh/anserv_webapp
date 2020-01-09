@@ -1,5 +1,13 @@
 <div id="main">
-  <code class="lang-json" pCode>
-     {{myJson}}
-    </code>
+  
+  <pre *ngIf="codereceived">
+    <code class="language-json" pCode>
+      {{myJson}}
+     </code>
+  </pre>
+
+  <div *ngIf="!codereceived">
+    <p>Response will appear here</p>
+  </div>
+
 </div>

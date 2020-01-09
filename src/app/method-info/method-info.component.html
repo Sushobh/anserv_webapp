@@ -1,11 +1,10 @@
-<div id="main">
+<div id="main" *ngIf="methodTemplate != null">
   <h1>Make your request here</h1>
-  <h4>Method: <span>getmethodinfo</span></h4>
+  <h4>Method: <span>{{methodTemplate.methodName}}</span></h4>
   <p-button label="Submit" (click)="clickedOnSubmit()"></p-button>
   <div id="main2">
-
     <ul class="form-list">
-      <li *ngFor="let item of requestTemplate | keyvalue">
+      <li *ngFor="let item of methodTemplate.keyMap | keyvalue">
         <p-card>
           <span class="ui-float-label">
             <input  type="text" size="30"  [(ngModel)]="postBody[item.key]" pInputText>  
@@ -18,3 +17,7 @@
   
   </div>
 </div>
+
+<p-toast key="loginResultToast" position="bottom-center"></p-toast>
+
+

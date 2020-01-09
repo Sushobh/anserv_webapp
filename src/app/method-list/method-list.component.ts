@@ -9,12 +9,17 @@ import { MainServiceService as MainService } from '../services/main-service.serv
 })
 export class MethodListComponent implements OnInit {
 
-  methodList: string[] = ['add method', 'get method', 'post method', 'update method'];
+  methodList: String[] = [];
   methodListDisplay = this.methodList;
+
 
   constructor(private mainService: MainService) { }
 
   ngOnInit() {
+    this.mainService.getMethods().subscribe((methods: String[]) =>{
+        this.methodList = methods;
+        this.methodListDisplay = this.methodList;
+    });
   }
 
   onSearchChange(searchValue: string): void {
@@ -27,8 +32,8 @@ export class MethodListComponent implements OnInit {
        }
   }
 
-  clickedOn(methodName : String){
-    this.mainService.methodClick.next(methodName)
+  clickedOn(methodName: String){
+    this.mainService.methodClick.next(methodName);
   }
 
 

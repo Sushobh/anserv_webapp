@@ -9,25 +9,26 @@ import { MethodTemplate } from '../network-request-classes/method-template';
 export class MainServiceService {
 
   port = 8080;
+  baseurl = '';
   jsonResultSubject: Subject<String> = new Subject<String>();
   methodClick: Subject<String> = new Subject<String>();
 
   constructor(private httpClient: HttpClient) {
-
+     
   }
 
   public getMethods(): Observable<String[]> {
-      return this.httpClient.get<String[]>(`http://localhost:${this.port}/getmethods`);
+      return this.httpClient.get<String[]>(`${this.baseurl}/getmethods`);
   }
 
   public getMethodsInfo(methodName: String): Observable<MethodTemplate> {
-    return this.httpClient.post<MethodTemplate>(`http://localhost:${this.port}/getmethodinfo`, {
+    return this.httpClient.post<MethodTemplate>(`${this.baseurl}/getmethodinfo`, {
       methodName : methodName
     });
   }
 
-  public executeMethod(postBody: any, methodName : String): Observable<any> {
-    return this.httpClient.post(`http://localhost:${this.port}/${methodName}`, postBody);
+  public executeMethod(postBody: any, methodName: String): Observable<any> {
+    return this.httpClient.post(`${this.baseurl}/${methodName}`, postBody);
   }
 
 }
