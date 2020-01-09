@@ -3,3 +3,12 @@ p{
     color: white;
     float: right;
 }
+
+
+#main {
+    width: 600px;
+}
+
+code {
+    height: 600px;
+}

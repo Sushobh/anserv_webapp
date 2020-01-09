@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, from } from 'rxjs';
 import { MethodTemplate } from '../network-request-classes/method-template';
 
 @Injectable({
@@ -25,6 +25,13 @@ export class MainServiceService {
     return this.httpClient.post<MethodTemplate>(`${this.baseurl}/getmethodinfo`, {
       methodName : methodName
     });
+  }
+
+  
+  public getDummyJSON() : Observable<any> {
+    
+     return this.httpClient.get<String[]>('https://jsonplaceholder.typicode.com/posts');
+
   }
 
   public executeMethod(postBody: any, methodName: String): Observable<any> {

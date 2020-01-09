@@ -13,14 +13,15 @@ import { CodeHighlightService } from '../services/code-highlight.service';
 
 export class ResponseDisplayComponent implements OnInit {
 
-  myJson = '{}';
+  myJson = '';
   codereceived = false;
 
   constructor(private mainService: MainServiceService) {
     this.mainService.jsonResultSubject.subscribe((any: string) => {
       this.codereceived = false;
       setTimeout(() => {
-        this.myJson = any;
+        let jsonPretty = '';
+        this.myJson = JSON.stringify(JSON.parse(any),null,4); 
         this.codereceived = true;
         console.log(this.myJson);
       }, 100);
